@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kalam Hostel | Student Residence</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f5f7fb;
+    color:#1e293b;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    background:linear-gradient(135deg,#082f49,#075985,#0f766e);
+    color:white;
+    padding-bottom:70px;
+}
+
+/* NAVBAR */
+
+nav{
+    width:100%;
+    padding:18px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(0,0,0,.18);
+}
+
+.logo-small{
+    font-size:25px;
+    font-weight:bold;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#fde68a;
+}
+
+/* ================= MAIN LOGO ================= */
+
+.hero{
+    min-height:82vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:50px 20px;
+}
+
+.house-logo{
+    width:180px;
+    height:150px;
+    margin:0 auto 25px;
+    position:relative;
+}
+
+/* roof */
+
+.roof{
+    position:absolute;
+    width:130px;
+    height:130px;
+    background:#f59e0b;
+    transform:rotate(45deg);
+    left:25px;
+    top:5px;
+    border-radius:15px;
+}
+
+/* house body */
+
+.house{
+    position:absolute;
+    width:145px;
+    height:105px;
+    background:white;
+    left:17px;
+    top:55px;
+    border-radius:8px;
+}
+
+/* door */
+
+.door{
+    position:absolute;
+    width:35px;
+    height:60px;
+    background:#164e63;
+    bottom:0;
+    left:55px;
+    border-radius:5px 5px 0 0;
+}
+
+/* windows */
+
+.window{
+    position:absolute;
+    width:25px;
+    height:25px;
+    background:#bae6fd;
+    border:3px solid #164e63;
+    top:20px;
+}
+
+.w1{
+    left:15px;
+}
+
+.w2{
+    right:15px;
+}
+
+/* KALAM TEXT */
+
+.kalam{
+    position:absolute;
+    z-index:10;
+    color:#0f172a;
+    font-size:20px;
+    font-weight:bold;
+    left:38px;
+    top:82px;
+    letter-spacing:2px;
+}
+
+.hero h1{
+    font-size:55px;
+    margin-top:15px;
+}
+
+.hero h2{
+    margin:15px 0;
+    font-size:24px;
+}
+
+.hero p{
+    max-width:700px;
+    line-height:1.7;
+    font-size:18px;
+    margin:auto;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:28px;
+    padding:14px 30px;
+    background:#fbbf24;
+    color:#111827;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+}
+
+/* ================= SECTION ================= */
+
+section{
+    padding:75px 8%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-title h2{
+    color:#075985;
+    font-size:36px;
+}
+
+.section-title p{
+    margin-top:10px;
+    color:#64748b;
+}
+
+/* ================= ABOUT ================= */
+
+.about{
+    display:flex;
+    gap:45px;
+    align-items:center;
+}
+
+.about-text{
+    flex:1;
+    line-height:1.9;
+    font-size:17px;
+}
+
+.about-image{
+    flex:1;
+}
+
+.about-image img{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 8px 25px #cbd5e1;
+}
+
+/* ================= MANAGEMENT ================= */
+
+.management{
+    background:#eaf4f8;
+}
+
+.manager-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.person-card{
+    background:white;
+    text-align:center;
+    padding:30px 20px;
+    border-radius:18px;
+    box-shadow:0 5px 20px #d5dde5;
+    transition:.3s;
+}
+
+.person-card:hover{
+    transform:translateY(-7px);
+}
+
+.person-icon{
+    width:80px;
+    height:80px;
+    margin:auto;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#e0f2fe;
+    font-size:40px;
+}
+
+.person-card h3{
+    margin:15px 0 8px;
+    color:#075985;
+}
+
+/* ================= HOSTEL STATS ================= */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.stat{
+    background:white;
+    text-align:center;
+    padding:30px 15px;
+    border-radius:18px;
+    box-shadow:0 5px 18px #dbe2e8;
+}
+
+.stat .number{
+    font-size:45px;
+    font-weight:bold;
+    color:#0f766e;
+}
+
+.stat h3{
+    margin-top:8px;
+}
+
+/* ================= MESS ================= */
+
+.mess{
+    background:#fff7ed;
+}
+
+.mess-box{
+    max-width:1000px;
+    margin:auto;
+    display:flex;
+    gap:35px;
+    align-items:center;
+}
+
+.mess-box img{
+    width:48%;
+    border-radius:18px;
+}
+
+.mess-info{
+    line-height:1.8;
+}
+
+.fee{
+    display:inline-block;
+    margin:18px 0;
+    background:#0f766e;
+    color:white;
+    padding:13px 22px;
+    border-radius:10px;
+    font-size:23px;
+    font-weight:bold;
+}
+
+/* ================= ROOMS ================= */
+
+.rooms{
+    background:#f8fafc;
+}
+
+.room-info{
+    max-width:1000px;
+    margin:auto;
+}
+
+.room-table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 20px #dbe2e8;
+}
+
+.room-table th{
+    background:#075985;
+    color:white;
+    padding:17px;
+}
+
+.room-table td{
+    padding:15px;
+    text-align:center;
+    border-bottom:1px solid #e2e8f0;
+}
+
+.senior{
+    background:#fef3c7;
+    font-weight:bold;
+}
+
+.badge{
+    background:#f59e0b;
+    color:#111827;
+    padding:6px 12px;
+    border-radius:20px;
+}
+
+/* ================= RULES ================= */
+
+.rules{
+    max-width:950px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+}
+
+.rule{
+    background:white;
+    padding:17px;
+    border-radius:10px;
+    border-left:5px solid #0f766e;
+    box-shadow:0 3px 12px #e2e8f0;
+}
+
+/* ================= GALLERY ================= */
+
+.gallery{
+    background:#eaf4f8;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.gallery-grid img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+    border-radius:15px;
+    transition:.3s;
+}
+
+.gallery-grid img:hover{
+    transform:scale(1.04);
+}
+
+/* ================= CONTACT ================= */
+
+.contact{
+    background:linear-gradient(135deg,#082f49,#075985);
+    color:white;
+    text-align:center;
+}
+
+.contact h2{
+    font-size:38px;
+    margin-bottom:25px;
+}
+
+.contact p{
+    margin:12px;
+    font-size:17px;
+}
+
+.contact-btn{
+    display:inline-block;
+    margin-top:22px;
+    padding:14px 28px;
+    border-radius:30px;
+    background:#22c55e;
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#082f49;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:800px){
+
+    nav{
+        flex-direction:column;
+        gap:12px;
+    }
+
+    nav a{
+        font-size:13px;
+        margin:4px;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .hero h2{
+        font-size:20px;
+    }
+
+    .manager-grid{
+        grid-template-columns:1fr;
+    }
+
+    .stats{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .about,
+    .mess-box{
+        flex-direction:column;
+    }
+
+    .about-image,
+    .mess-box img{
+        width:100%;
+    }
+
+    .rules{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr;
+    }
+
+    .room-table{
+        font-size:13px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header id="home">
+
+<nav>
+
+<div class="logo-small">
+🏠 Kalam Hostel
+</div>
+
+<div>
+<a href="#home">Home</a>
+<a href="#management">Management</a>
+<a href="#rooms">Rooms</a>
+<a href="#mess">Mess</a>
+<a href="#rules">Rules</a>
+<a href="#gallery">Gallery</a>
+</div>
+
+</nav>
+
+
+<div class="hero">
+
+<div>
+
+<!-- HOUSE LOGO -->
+
+<div class="house-logo">
+
+<div class="roof"></div>
+
+<div class="house">
+
+<div class="window w1"></div>
+<div class="window w2"></div>
+
+<div class="door"></div>
+
+</div>
+
+<div class="kalam">KALAM</div>
+
+</div>
+
+
+<h1>Kalam Hostel</h1>
+
+<h2>🏠 A Home Away From Home</h2>
+
+<p>
+विद्यार्थियों के लिए रहने, पढ़ने, आराम करने और
+भोजन की सुविधाओं के साथ एक व्यवस्थित hostel.
+</p>
+
+<a href="#facilities" class="btn">
+Explore Hostel ↓
+</a>
+
+</div>
+
+</div>
+
+</header>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section>
+
+<div class="section-title">
+
+<h2>About Kalam Hostel</h2>
+
+<p>हमारा Hostel • आपका दूसरा घर</p>
+
+</div>
+
+<div class="about">
+
+<div class="about-text">
+
+<p>
+<strong>Kalam Hostel</strong> विद्यार्थियों के लिए
+एक comfortable और study-friendly रहने की जगह है।
+हमारा उद्देश्य students को ऐसा environment देना है
+जहाँ वे अपनी पढ़ाई और दैनिक जीवन को व्यवस्थित तरीके
+से आगे बढ़ा सकें।
+</p>
+
+<br>
+
+<p>
+Hostel में रहने, सोने, पढ़ने, नहाने और भोजन जैसी
+जरूरी सुविधाओं को ध्यान में रखते हुए व्यवस्था की गई है।
+साथ ही cleanliness, discipline और mutual respect
+पर भी ध्यान दिया जाता है।
+</p>
+
+</div>
+
+<div class="about-image">
+
+<img
+src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=1000&q=80"
+alt="Hostel">
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= MANAGEMENT ================= -->
+
+<section class="management" id="management">
+
+<div class="section-title">
+
+<h2>👨‍💼 Hostel Management</h2>
+
+<p>Hostel administration team</p>
+
+</div>
+
+<div class="manager-grid">
+
+
+<div class="person-card">
+
+<div class="person-icon">👨‍💼</div>
+
+<h3>Abhishek Gupta</h3>
+
+<p><strong>Hostel Incharge</strong></p>
+
+<p>Hostel management और student coordination.</p>
+
+</div>
+
+
+<div class="person-card">
+
+<div class="person-icon">👨‍🏫</div>
+
+<h3>Omprakash Sir</h3>
+
+<p><strong>Hostel Warden</strong></p>
+
+<p>Discipline और hostel व्यवस्था की देखरेख.</p>
+
+</div>
+
+
+<div class="person-card">
+
+<div class="person-icon">🎓</div>
+
+<h3>SK Azad Sir</h3>
+
+<p><strong>Principal</strong></p>
+
+<p>Institutional guidance और administration.</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- ================= FACILITIES ================= -->
+
+<section id="facilities">
+
+<div class="section-title">
+
+<h2>🏠 Hostel Overview</h2>
+
+<p>हमारे hostel की मुख्य सुविधाएँ</p>
+
+</div>
+
+<div class="stats">
+
+<div class="stat">
+
+<div class="number">20</div>
+
+<h3>🛏️ Rooms</h3>
+
+<p>कुल कमरे</p>
+
+</div>
+
+
+<div class="stat">
+
+<div class="number">4</div>
+
+<h3>🚿 Washrooms</h3>
+
+<p>कुल washrooms</p>
+
+</div>
+
+
+<div class="stat">
+
+<div class="number">1</div>
+
+<h3>🍛 Mess</h3>
+
+<p>Hostel Mess</p>
+
+</div>
+
+
+<div class="stat">
+
+<div class="number">₹2500</div>
+
+<h3>💰 Mess Fee</h3>
+
+<p>प्रति माह</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= MESS ================= -->
+
+<section class="mess" id="mess">
+
+<div class="section-title">
+
+<h2>🍛 Hostel Mess</h2>
+
+<p>Daily food & dining facility</p>
+
+</div>
+
+<div class="mess-box">
+
+<img
+src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1000&q=80"
+alt="Mess Food">
+
+<div class="mess-info">
+
+<h2>Mess Facility</h2>
+
+<p>
+Hostel residents के लिए daily भोजन की व्यवस्था।
+Students के लिए एक निर्धारित mess system रखा गया है।
+</p>
+
+<div class="fee">
+₹2,500 / Month
+</div>
+
+<p>
+<strong>👨‍🍳 Mess Owner:</strong>
+Mansharam Yadav
+</p>
+
+<p>
+🍽️ भोजन • 🧼 Cleanliness • 🕐 Regular Meal Schedule
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= ROOMS ================= -->
+
+<section class="rooms" id="rooms">
+
+<div class="section-title">
+
+<h2>🛏️ Room Information</h2>
+
+<p>Hostel में कुल 20 rooms</p>
+
+</div>
+
+<div class="room-info">
+
+<table class="room-table">
+
+<tr>
+<th>Room No.</th>
+<th>Category</th>
+<th>Status / Information</th>
+</tr>
+
+<tr>
+<td>01 – 05</td>
+<td>Regular</td>
+<td>Student Rooms</td>
+</tr>
+
+<tr>
+<td>06 – 10</td>
+<td>Regular</td>
+<td>Student Rooms</td>
+</tr>
+
+<tr>
+<td>11 – 15</td>
+<td>Regular</td>
+<td>Student Rooms</td>
+</tr>
+
+<tr>
+<td>16 – 17</td>
+<td>Regular</td>
+<td>Student Rooms</td>
+</tr>
+
+<tr class="senior">
+<td>18</td>
+<td><span class="badge">Senior</span></td>
+<td>Senior Student Room</td>
+</tr>
+
+<tr class="senior">
+<td>19</td>
+<td><span class="badge">Senior</span></td>
+<td>Senior Student Room</td>
+</tr>
+
+<tr class="senior">
+<td>20</td>
+<td><span class="badge">Senior</span></td>
+<td>Senior Student Room</td>
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+
+<!-- ================= RULES ================= -->
+
+<section id="rules">
+
+<div class="section-title">
+
+<h2>📋 Kalam Hostel Rules</h2>
+
+<p>सभी residents के लिए 15 जरूरी नियम</p>
+
+</div>
+
+<div class="rules">
+
+<div class="rule">1️⃣ Hostel में साफ-सफाई बनाए रखें।</div>
+
+<div class="rule">2️⃣ दूसरे students की पढ़ाई में disturbance न करें।</div>
+
+<div class="rule">3️⃣ रात में निर्धारित quiet hours का पालन करें।</div>
+
+<div class="rule">4️⃣ कमरे की चीजों को नुकसान न पहुँचाएँ।</div>
+
+<div class="rule">5️⃣ पानी को व्यर्थ न बहाएँ।</div>
+
+<div class="rule">6️⃣ बिजली का अनावश्यक उपयोग न करें।</div>
+
+<div class="rule">7️⃣ Mess के निर्धारित समय का पालन करें।</div>
+
+<div class="rule">8️⃣ भोजन को waste न करें।</div>
+
+<div class="rule">9️⃣ Bathroom को उपयोग के बाद साफ रखें।</div>
+
+<div class="rule">🔟 किसी दूसरे resident की वस्तु बिना अनुमति न लें।</div>
+
+<div class="rule">1️⃣1️⃣ Hostel staff और fellow students का सम्मान करें।</div>
+
+<div class="rule">1️⃣2️⃣ किसी भी विवाद की जानकारी warden को दें।</div>
+
+<div class="rule">1️⃣3️⃣ Hostel property को नुकसान पहुँचाना प्रतिबंधित है।</div>
+
+<div class="rule">1️⃣4️⃣ Visitors के संबंध में hostel management के नियमों का पालन करें।</div>
+
+<div class="rule">1️⃣5️⃣ Hostel की safety और discipline बनाए रखना सभी की जिम्मेदारी है।</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= GALLERY ================= -->
+
+<section class="gallery" id="gallery">
+
+<div class="section-title">
+
+<h2>📸 Kalam Hostel Gallery</h2>
+
+<p>Rooms • Campus • Study • Food • Living</p>
+
+</div>
+
+<div class="gallery-grid">
+
+<img
+src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=900&q=80"
+alt="Hostel Room">
+
+<img
+src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=900&q=80"
+alt="Student Room">
+
+<img
+src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=80"
+alt="Students">
+
+<img
+src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=80"
+alt="Mess Food">
+
+<img
+src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=900&q=80"
+alt="Study">
+
+<img
+src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80"
+alt="Study Area">
+
+</div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact">
+
+<h2>📞 Kalam Hostel</h2>
+
+<p>🏠 Student Residence & Hostel</p>
+
+<p>👨‍💼 Hostel Incharge: Abhishek Gupta</p>
+
+<p>👨‍🏫 Warden: Omprakash Sir</p>
+
+<p>🍛 Mess Owner: Mansharam Yadav</p>
+
+<p>💰 Mess Fee: ₹2,500 / Month</p>
+
+<a
+href="tel:+91XXXXXXXXXX"
+class="contact-btn">
+
+📞 Contact Hostel
+
+</a>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<h3>🏠 KALAM HOSTEL</h3>
+
+<p>
+A Place to Live • Study • Eat • Rest
+</p>
+
+<br>
+
+<p>
+© 2026 Kalam Hostel | All Rights Reserved
+</p>
+
+</footer>
+
+</body>
+</html>
