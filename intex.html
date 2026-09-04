@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>R K Biryani Point | Bhatani</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#fff8ef;
+    color:#222;
+}
+
+/* HEADER */
+header{
+    background:#111;
+    color:white;
+    padding:18px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.logo{
+    font-size:25px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:#ffb300;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+}
+
+/* HERO */
+.hero{
+    min-height:85vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:40px 20px;
+
+    background:
+    linear-gradient(rgba(0,0,0,.60),rgba(0,0,0,.60)),
+    url("https://images.unsplash.com/photo-1563379091339-03246963d96c?auto=format&fit=crop&w=1600&q=80");
+
+    background-size:cover;
+    background-position:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.hero h1 span{
+    color:#ffb300;
+}
+
+.hero p{
+    font-size:20px;
+    margin-bottom:25px;
+}
+
+.btn{
+    display:inline-block;
+    padding:13px 22px;
+    margin:7px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    background:#ffb300;
+    color:#111;
+}
+
+.btn.dark{
+    background:white;
+}
+
+/* SECTION */
+section{
+    padding:55px 7%;
+}
+
+.title{
+    text-align:center;
+    font-size:32px;
+    margin-bottom:35px;
+}
+
+/* MENU */
+.menu{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+}
+
+.card h3{
+    margin:12px 0;
+    color:#9b5700;
+}
+
+.price{
+    font-size:20px;
+    font-weight:bold;
+    color:#d35400;
+}
+
+/* PHOTO SLIDER */
+.slider{
+    max-width:900px;
+    height:480px;
+    margin:auto;
+    overflow:hidden;
+    border-radius:20px;
+    box-shadow:0 8px 30px rgba(0,0,0,.2);
+    position:relative;
+}
+
+.slider img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:none;
+}
+
+.slider img.active{
+    display:block;
+    animation:fade 1s;
+}
+
+@keyframes fade{
+    from{opacity:.3}
+    to{opacity:1}
+}
+
+/* ABOUT */
+.about{
+    background:#21170d;
+    color:white;
+    text-align:center;
+}
+
+.about p{
+    max-width:800px;
+    margin:auto;
+    line-height:1.8;
+    font-size:17px;
+}
+
+/* FEATURES */
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
+
+.feature{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.feature .icon{
+    font-size:40px;
+}
+
+/* CONTACT */
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    margin:12px;
+    font-size:18px;
+}
+
+/* FOOTER */
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+/* MOBILE */
+@media(max-width:700px){
+
+    header{
+        flex-direction:column;
+        gap:12px;
+    }
+
+    nav a{
+        margin:0 7px;
+        font-size:14px;
+    }
+
+    .hero h1{
+        font-size:35px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+    .slider{
+        height:300px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        R K <span>Biryani Point</span>
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#photos">Photos</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div>
+
+        <h1>
+            R K <span>Biryani Point</span>
+        </h1>
+
+        <p>
+            🍗 Bhatani ka Swadisht Biryani Point 🍗
+        </p>
+
+        <p>
+            Fresh • Hot • Delicious • Full of Flavour
+        </p>
+
+        <a class="btn"
+           href="https://www.google.com/maps/search/?api=1&query=R+K+Biryani+Point+Bhatani">
+           📍 Get Directions
+        </a>
+
+        <a class="btn dark"
+           href="tel:+91XXXXXXXXXX">
+           📞 Call Now
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- MENU -->
+
+<section id="menu">
+
+    <h2 class="title">
+        🍛 Our Biryani Menu
+    </h2>
+
+    <div class="menu">
+
+        <div class="card">
+            <div style="font-size:55px;">🍗</div>
+            <h3>Chicken Biryani</h3>
+            <p>Masaledar aur aromatic chicken biryani.</p>
+            <br>
+            <div class="price">₹ —</div>
+        </div>
+
+        <div class="card">
+            <div style="font-size:55px;">🥩</div>
+            <h3>Mutton Biryani</h3>
+            <p>Soft mutton ke saath special masala.</p>
+            <br>
+            <div class="price">₹ —</div>
+        </div>
+
+        <div class="card">
+            <div style="font-size:55px;">🥚</div>
+            <h3>Egg Biryani</h3>
+            <p>Delicious egg aur special biryani rice.</p>
+            <br>
+            <div class="price">₹ —</div>
+        </div>
+
+        <div class="card">
+            <div style="font-size:55px;">🌱</div>
+            <h3>Veg Biryani</h3>
+            <p>Fresh vegetables aur tasty aromatic rice.</p>
+            <br>
+            <div class="price">₹ —</div>
+        </div>
+
+        <div class="card">
+            <div style="font-size:55px;">🍖</div>
+            <h3>Special Biryani</h3>
+            <p>R K Biryani Point ki special recipe.</p>
+            <br>
+            <div class="price">₹ —</div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- AUTOMATIC PHOTO SLIDER -->
+
+<section id="photos">
+
+    <h2 class="title">
+        📸 Biryani Gallery
+    </h2>
+
+    <div class="slider">
+
+        <img class="active"
+        src="https://images.unsplash.com/photo-1563379091339-03246963d96c?auto=format&fit=crop&w=1200&q=85">
+
+        <img
+        src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=1200&q=85">
+
+        <img
+        src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=1200&q=85">
+
+        <img
+        src="https://images.unsplash.com/photo-1599043513900-ed6fe01d3833?auto=format&fit=crop&w=1200&q=85">
+
+    </div>
+
+    <p style="text-align:center;margin-top:15px;">
+        🔄 Biryani photos automatically change hoti rahengi
+    </p>
+
+</section>
+
+
+<!-- FEATURES -->
+
+<section>
+
+    <h2 class="title">
+        ⭐ Why Choose R K Biryani Point?
+    </h2>
+
+    <div class="features">
+
+        <div class="feature">
+            <div class="icon">🍚</div>
+            <h3>Fresh Biryani</h3>
+            <p>Freshly prepared delicious biryani.</p>
+        </div>
+
+        <div class="feature">
+            <div class="icon">🔥</div>
+            <h3>Hot & Fresh</h3>
+
